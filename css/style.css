@@ -1,0 +1,110 @@
+body{
+	padding: 0px;
+	margin: 0px;
+	font-family: Helvetica;
+	color: white;
+	background-image: url('../tasky_pattern.png');
+}
+
+#red, #green, #blue {
+    float: left;
+    clear: left;
+    width: 300px;
+    margin: 10px;
+  }
+
+ #red .ui-slider-range { background: #ef2929; }
+ #red .ui-slider-handle { border-color: #ef2929; }
+ #green .ui-slider-range { background: #8ae234; }
+ #green .ui-slider-handle { border-color: #8ae234; }
+ #blue .ui-slider-range { background: #729fcf; }
+ #blue .ui-slider-handle { border-color: #729fcf; }
+  
+ #swatch {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 350px;
+    background-image: none;
+    background-color: black;
+
+  }
+
+#headline{
+
+	width: 100%;
+	height: 75px;
+	background-color: black;
+}
+
+#headline h1{
+	padding: 20px;
+	margin: 0;
+}
+
+#about{
+	display: none;
+	width: 100%;
+	height: 200px;
+	background-color: black;
+}
+
+#container{
+	width: 100%;
+	margin-top: 20px;
+
+}
+
+#colorPicker, #averageColor{
+	float: left;
+	width: 50%;
+	
+	
+}
+
+#colorPicker{
+	background-color: black;
+}
+
+
+#slider, #avgContainer{
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#myColors{
+	border: white solid 1px;
+	padding: 10px;
+	margin-bottom: 20px;
+	width: 90%;
+	height: 250px;
+	overflow: scroll;
+	overflow-x: hidden;
+	font-family: Helvetica;
+	font-weight: bold;
+
+}
+
+.rgbColor{
+	padding: 10px;
+	margin: 10px;
+	cursor: pointer;
+	border: solid white 1px;
+}
+
+.button{
+	padding:5px;
+  	background-color: #dcdcdc;
+  	border: 1px solid #666;
+  	color:#000;
+  	text-decoration:none;
+}
+
+#average{
+	margin: auto;
+	width: 90%;
+	height: 200px;
+	background-color: black;
+	border: solid white;
+}
+
