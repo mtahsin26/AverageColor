@@ -1,8 +1,13 @@
+  //Vars for sum of RGB values
   var sumR = 0;
   var sumG = 0;
   var sumB = 0;
-  var total = 0;
+  var total = 0; //Total number of colors to be calculated
 
+  /*
+    function called to change the color of the swatch for the Slider UI
+    -called on every slide change
+  */
   function color(){
 
       var r = $('#red').slider("value"); 
@@ -16,7 +21,8 @@
   }
 
 	$(document).ready(function(){
-    //slider
+    
+    //slider functionality
     $( "#red, #green, #blue" ).slider({
         orientation: "horizontal",
         range: "min",
@@ -27,6 +33,7 @@
         
       });
 
+    //If clear all button is pressed, reset everything
     $('#clearAll').on('click', function(){
       
       //$('#average').css('background-color', 'rgb(' +r+','+g+','+b+')');
@@ -55,6 +62,7 @@
       $(d).css('background-color', 'rgb(' +r+','+g+','+b+')')
       .html('rgb(' +r+','+g+','+b+')' + ' - Click to remove')
       .click(function(){
+
         sumR -= $(this).data('rgb').red
         sumG -= $(this).data('rgb').green
         sumB -= $(this).data('rgb').blue
@@ -75,6 +83,7 @@
               //console.log("REMOVED: " + sumR + "|" + sumG +"|" + sumB);
               //console.log("Total divs: " + total);
               $('#average').css('background-color', 'rgb(' + Math.round(sumR/total)+','+ Math.round(sumG/total)+','+ Math.round(sumB/total)+')');
+              $('#avgContainer h2').html('Average Color: rgb(' + Math.round(sumR/total)+','+ Math.round(sumG/total)+','+ Math.round(sumB/total)+')');
             }
         }); 
       })
